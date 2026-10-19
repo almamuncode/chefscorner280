@@ -4,6 +4,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { site } from "@/data/site";
 import "./globals.css";
+import { RestaurantSchema } from "@/components/restaurant-schema";
 const sans = localFont({
   src: [
     { path: "./fonts/dm-sans-regular.ttf", weight: "400" },
@@ -19,10 +20,21 @@ const display = localFont({
   display: "swap",
 });
 export const metadata: Metadata = {
-  title: site.name,
-  description: "Lunch – Dinner – Catering in Pittston, PA.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Chef’s Corner | Lunch, Dinner & Catering in Pittston, PA",
+    template: "%s | Chef’s Corner",
+  },
+  description:
+    "Brother-owned neighborhood restaurant in Pittston, PA. Explore our menu, plan your next catered event, or join us for lunch and dinner. B.Y.O.B.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: site.name,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
 };
-
 export default function RootLayout({
   children,
 }: {
@@ -31,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sans.variable} ${display.variable}`}>
+        <RestaurantSchema />
         <Header />
         <main id="main">{children}</main>
         <Footer />
