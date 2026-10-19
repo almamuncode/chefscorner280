@@ -1,6 +1,8 @@
 export const site = {
   name: "Chef's Corner",
   tagline: "Lunch – Dinner – Catering",
+  aboutText:
+    "Feeding your needs from dining in to office lunches, baby showers & traveling to weddings! We do it all! Contact us today about renting out our dining room or catering your next event!",
   phone: "570-569-2591",
   tel: "tel:+15705692591",
   email: "chefscorneronmain@gmail.com",

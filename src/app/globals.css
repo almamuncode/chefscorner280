@@ -2345,3 +2345,86 @@ button:disabled {
     color: #444;
   }
 }
+.brand-logo {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  line-height: 0;
+}
+.header .brand-logo img {
+  width: 132px;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+.footer .brand-logo img {
+  width: 180px;
+  height: auto;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+@media (max-width: 760px) {
+  .header .brand-logo img {
+    width: 110px;
+  }
+}
+.footer h2.eyebrow {
+  font-family: var(--font-body), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.footer-label {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 18px 0 8px;
+}
+.footer address {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #b7b5ae;
+}
+.footer address a {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--cream);
+}
+.footer-hours {
+  margin: 0;
+  font-size: 11px;
+  color: #b7b5ae;
+}
+.footer-hours > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+  flex-wrap: wrap;
+}
+.footer-hours dd {
+  margin: 0;
+  white-space: nowrap;
+}
+.footer-catering-link {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+  .footer-top {
+    gap: 30px;
+    grid-template-columns: 0.8fr 1.1fr 1.1fr;
+  }
+  .footer-hours > div {
+    display: block;
+  }
+}
+@media (max-width: 760px) {
+  .footer address,
+  .footer-hours {
+    font-size: 13px;
+  }
+  .footer-label {
+    font-size: 13px;
+  }
+}

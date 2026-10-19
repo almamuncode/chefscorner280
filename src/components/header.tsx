@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X, Phone, MapPin, Utensils } from "lucide-react";
@@ -25,8 +26,14 @@ export function Header() {
       </div>
       <header className="header">
         <div className="container header-inner">
-          <Link className="wordmark" href="/" aria-label="Chef’s Corner home">
-            CHEF’S CORNER<span>LUNCH · DINNER · CATERING</span>
+          <Link className="brand-logo" href="/" aria-label="Chef’s Corner home">
+            <Image
+              src="/brand/logo.png"
+              alt="Chef’s Corner — Lunch – Dinner – Catering"
+              width={206}
+              height={120}
+              priority
+            />
           </Link>
           <nav aria-label="Main navigation" className="desktop-nav">
             {links.map((l) => (
