@@ -42,7 +42,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} ${display.variable}`}>
+      {/* Grammarly injects body attributes before hydration. Suppress only this element. */}
+      <body
+        className={`${sans.variable} ${display.variable}`}
+        suppressHydrationWarning
+      >
         <RestaurantSchema />
         <Header />
         <main id="main">{children}</main>
