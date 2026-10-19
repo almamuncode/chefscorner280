@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:3000/",
+  "fetchTime": "2026-10-19T17:21:06.465Z",
+  "lighthouseVersion": "13.4.1",
+  "formFactor": "mobile",
+  "scores": {
+    "performance": 95,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:3000/menu",
+  "fetchTime": "2026-10-19T17:22:53.187Z",
+  "lighthouseVersion": "13.4.1",
+  "formFactor": "mobile",
+  "scores": {
+    "performance": 97,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  }
+}
