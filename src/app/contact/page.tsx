@@ -3,6 +3,7 @@ import { ArrowUpRight, Phone, Mail, MapPin } from "lucide-react";
 import { PageHeading } from "@/components/page-heading";
 import { HoursTable } from "@/components/visit-section";
 import { OpenStatus } from "@/components/open-status";
+import { InquiryForm } from "@/components/inquiry-form";
 import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Visit Us & Contact",
@@ -98,6 +99,35 @@ export default function Contact() {
           Open in Google Maps <ArrowUpRight size={15} />
         </a>
       </div>
+      <section className="inquiry-section contact-inquiry">
+        <div className="container inquiry-layout">
+          <div>
+            <span className="eyebrow">DROP US A LINE</span>
+            <h2>
+              WE’D LOVE
+              <br />
+              TO HEAR FROM YOU.
+            </h2>
+            <p>
+              Have a question about the menu, a gathering, or dining with us?
+              Send us a message.
+            </p>
+            <p>
+              For orders and time-sensitive requests, give us a call at{" "}
+              <a href={site.tel}>{site.phone}</a>.
+            </p>
+            <a
+              className="text-link"
+              href={site.facebook}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Daily features on Facebook <ArrowUpRight size={16} />
+            </a>
+          </div>
+          <InquiryForm kind="contact" />
+        </div>
+      </section>
     </>
   );
 }
